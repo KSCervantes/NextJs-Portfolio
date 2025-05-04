@@ -10,7 +10,7 @@ export default function Contact() {
 
       {/* Contact Form or Information */}
       <div className="max-w-xl mx-auto text-center border border-gray-300 rounded-lg p-8 shadow-sm">
-        <p className="text-lg mb-6">I'd love to hear from you! Feel free to download my CV below.</p>
+        <p className="text-lg mb-6">I&apos;d love to hear from you! Feel free to download my CV below.</p>
 
         <div className="flex justify-center mb-8">
           <a
