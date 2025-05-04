@@ -39,26 +39,25 @@ export default function Projects() {
       name: "Enrollment System",
       description: "A Full-Stack ROTC Enrollment System.",
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      website: "https://example.com/ecommerce",
+      website: "#",
       github: "https://github.com/username/ecommerce",
       color: "purple",
       logo: "📑",
       image: "/images/Rotc.png",
       hasMobile: false,
-      mobileUrl: "https://example.com/enrollment-mobile"
     },
     {
       id: 3,
       name: "Community Bulletin App",
       description: "A Full-Stack Community Bulletin App.",
       technologies: ["Flutter", "Supabase"],
-      website: "",
-      github: "",
+      website: "#",
+      github: #",
       color: "purple",
       logo: "📑",
       image: "/images/ogol.png",
       hasMobile: true,
-      mobileUrl: "https://example.com/bulletin-app"
+      mobileUrl: "#"
     },
   ];
 
