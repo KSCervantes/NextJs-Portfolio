@@ -52,7 +52,7 @@ export default function Projects() {
       description: "A Full-Stack Community Bulletin App.",
       technologies: ["Flutter", "Supabase"],
       website: "#",
-      github: #",
+      github: "#",
       color: "purple",
       logo: "📑",
       image: "/images/ogol.png",
