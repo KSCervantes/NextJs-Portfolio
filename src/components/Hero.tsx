@@ -122,7 +122,7 @@ export default function Hero() {
                     }`}
                     style={{ transitionDelay: `${i * 100 + 300}ms` }}
                   >
-                    {skillIcons[skill]}
+                    {skillIcons[skill as keyof typeof skillIcons]}
                     <span className="text-xs sm:text-sm">{skill}</span>
                   </div>
                 ))}
