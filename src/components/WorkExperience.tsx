@@ -25,7 +25,7 @@ export default function WorkExperience() {
       id: 1,
       company: "Freelance",
       position: "Full Stack Web & Mobile Developer",
-      period: "2022 – Present",
+      period: "2024 – Present",
       description: "Developing custom web and mobile applications for various clients using modern frameworks and technologies.",
       skills: ["NextJS", "React", "Tailwind CSS", "Flutter", "Databases", "Python",],
       website: "#",
