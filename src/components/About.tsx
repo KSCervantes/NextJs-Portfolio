@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeTab, setActiveTab] = useState("All");
+  const [activeTab,] = useState("All");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -78,34 +78,34 @@ export default function About() {
           <div className="p-4 text-gray-700 font-mono text-md">
             <div>const information = {"{"}</div>
             <div className="ml-4">
-              <span className="text-blue-500">name</span>: "{information.name}",
+              <span className="text-blue-500">name</span>: &quot;{information.name}&quot;,
             </div>
             <div className="ml-4">
-              <span className="text-blue-500">role</span>: "{information.role}",
+              <span className="text-blue-500">role</span>: &quot;{information.role}&quot;,
             </div>
             <div className="ml-4">
-              <span className="text-blue-500">address</span>: "{information.address}",
+              <span className="text-blue-500">address</span>: &quot;{information.address}&quot;,
             </div>
             <div className="ml-4">
-              <span className="text-blue-500">freelance</span>: "{information.freelance}",
+              <span className="text-blue-500">freelance</span>: &quot;{information.freelance}&quot;,
             </div>
             <div className="ml-4">
-              <span className="text-blue-500">age</span>: "{information.age}",
+              <span className="text-blue-500">age</span>: &quot;{information.age}&quot;,
             </div>
             <div className="ml-4">
-              <span className="text-blue-500">nationality</span>: "{information.nationality}",
+              <span className="text-blue-500">nationality</span>: &quot;{information.nationality}&quot;,
             </div>
             <div className="ml-4">
               <span className="text-blue-500">languages</span>: [
               {information.languages.map((lang, i) => (
                 <span key={i}>
-                  "{lang}"{i < information.languages.length - 1 && ", "}
+                  &quot;{lang}&quot;{i < information.languages.length - 1 && ", "}
                 </span>
               ))}
               ],
             </div>
             <div className="ml-4">
-              <span className="text-blue-500">phone</span>: "{information.phone}",
+              <span className="text-blue-500">phone</span>: &quot;{information.phone}&quot;,
             </div>
             <div>{"};"}</div>
           </div>
