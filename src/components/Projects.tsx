@@ -75,7 +75,7 @@ export default function Projects() {
         </h2>
         <h2 className="text-5xl font-extrabold mb-8 text-center text-black">Some of my Projects</h2>
         <p className="text-gray-600 text-center mb-8 text-sm md:text-base">
-          Here are some of the projects I've worked on. Click on the links to view them.
+          Here are some of the projects I&#39;ve worked on. Click on the links to view them.
         </p>
         {/* Projects List */}
         <div className="space-y-8">
@@ -135,7 +135,7 @@ export default function Projects() {
                       {/* MOBILE button */}
                       {project.hasMobile && (
                         <Link
-                          href={project.mobileUrl}
+                          href={project.mobileUrl!}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="px-3 py-1 text-xs font-medium rounded border border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-white transition-colors"
