@@ -79,8 +79,8 @@ export default function Hero() {
       {/* Enhanced background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-blue-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
-        <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-purple-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
+        <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-white rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
         <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-yellow-50 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-1000"></div>
       </div>
 
@@ -101,9 +101,9 @@ export default function Hero() {
                 className="object-cover"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 mix-blend-overlay group-hover:opacity-75 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-black-500/20 mix-blend-overlay group-hover:opacity-75 transition-opacity duration-500"></div>
             </div>
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity duration-500 -z-10"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-black rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity duration-500 -z-10"></div>
           </div>
 
           {/* Text content - enhanced typography and spacing */}
@@ -130,13 +130,13 @@ export default function Hero() {
                   className="inline-block px-8 py-4 text-white bg-gradient-to-r from-gray-900 to-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105 hover:from-gray-800 hover:to-gray-700 text-base sm:text-lg font-medium relative group"
                 >
                   <span className="relative z-10">Get in Touch</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-black rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </a>
               </div>
             </div>
 
             {/* Enhanced skills slider with better spacing and animations */}
-            <div className="mt-12 w-full overflow-hidden bg-white/70 backdrop-blur-md rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg border border-gray-100">
+            <div className="mt-12 w-full overflow-hidden bg-white/70 backdrop-blur-md rounded-2xl p-4 sm:p-5 md:p-6 ">
               <div
                 ref={skillsContainerRef}
                 className="flex animate-scroll gap-4 sm:gap-5 md:gap-6 py-4 sm:py-5 md:py-6"

@@ -60,8 +60,8 @@ export default function About() {
     >
       {/* Enhanced decorative elements */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob"></div>
-      <div className="absolute top-0 right-0 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-2000"></div>
-      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-4000"></div>
+      <div className="absolute top-0 right-0 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-2000"></div>
+      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-4000"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-200/30 via-purple-200/30 to-pink-200/30 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse"></div>
 
       <div
@@ -122,7 +122,7 @@ export default function About() {
         {/* Soft Skills - Enhanced with 3D cards */}
         <div className="backdrop-blur-md bg-white/40 rounded-3xl mb-20 p-10 border border-gray-200/50 shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-1">
           <h3 className="text-black font-black mb-10 flex items-center text-xl">
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white rounded-2xl w-11 h-11 flex items-center justify-center mr-4 shadow-lg transform hover:rotate-12 transition-transform duration-300">
+            <span className="text-black rounded-2xl w-11 h-11 flex items-center justify-center mr-4 shadow-lg transform hover:rotate-12 transition-transform duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"

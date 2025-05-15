@@ -104,7 +104,7 @@ export default function WorkExperience() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-shrink-0 mr-4 text-2xl bg-white w-16 h-16 flex items-center justify-center rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:rotate-12"
-                  style={{ color: exp.color === 'blue' ? '#3b82f6' : exp.color === 'purple' ? '#8b5cf6' : '#10b981' }}
+                  style={{ color: exp.color === 'blue' ? '#3b82f6' : exp.color === 'blue' ? '#8b5cf6' : '#10b981' }}
                 >
                   {exp.logo}
                 </Link>
@@ -120,7 +120,7 @@ export default function WorkExperience() {
                     </Link>
                     <span className="text-xs font-medium text-gray-500 sm:ml-2 bg-gray-100 px-3 py-1 rounded-full">{exp.period}</span>
                   </div>
-                  <p className="text-base font-semibold mt-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                  <p className="text-base font-semibold mt-1 bg-gradient-to-r from-blue-600 via-blue-600 to-blue-600 bg-clip-text text-transparent">
                     {exp.position}
                   </p>
                   <p className="text-gray-600 text-sm mt-1 leading-relaxed">{exp.description}</p>
