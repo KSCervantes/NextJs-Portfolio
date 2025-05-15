@@ -1,5 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
+import { FaPython, FaReact, FaJs, FaHtml5, FaPhp } from "react-icons/fa";
+import { SiNextdotjs, SiFlutter, SiTailwindcss, SiMysql, SiFirebase, SiSupabase } from "react-icons/si";
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,17 +35,17 @@ export default function About() {
   };
 
   const skills = [
-    { name: "Python", category: "" },
-    { name: "React", category: "" },
-    { name: "Next.js", category: "" },
-    { name: "JavaScript", category: "" },
-    { name: "HTML", category: "" },
-    { name: "PHP", category: "" },
-    { name: "Flutter", category: "" },
-    { name: "Tailwind CSS", category: "" },
-    { name: "MySQL", category: "" },
-    { name: "Firebase", category: "" },
-    { name: "Supabase", category: "" },
+    { name: "Python", icon: <FaPython />, category: "" },
+    { name: "React", icon: <FaReact />, category: "" },
+    { name: "Next.js", icon: <SiNextdotjs />, category: "" },
+    { name: "JavaScript", icon: <FaJs />, category: "" },
+    { name: "HTML", icon: <FaHtml5 />, category: "" },
+    { name: "PHP", icon: <FaPhp />, category: "" },
+    { name: "Flutter", icon: <SiFlutter />, category: "" },
+    { name: "Tailwind CSS", icon: <SiTailwindcss />, category: "" },
+    { name: "MySQL", icon: <SiMysql />, category: "" },
+    { name: "Firebase", icon: <SiFirebase />, category: "" },
+    { name: "Supabase", icon: <SiSupabase />, category: "" },
   ];
 
   const filteredSkills =
@@ -231,8 +233,9 @@ export default function About() {
               return (
                 <span
                   key={index}
-                  className="bg-gray-950 text-white px-3 py-1 rounded-full text-sm border border-black transition-transform duration-200"
+                  className="flex items-center gap-2 bg-gray-950 text-white px-3 py-1 rounded-full text-sm border border-black transition-transform duration-200"
                 >
+                  <span className="text-lg">{skill.icon}</span>
                   {skill.name}
                 </span>
               );

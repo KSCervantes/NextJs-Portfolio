@@ -49,15 +49,15 @@ export default function Projects() {
     {
       id: 3,
       name: "Community Bulletin App",
-      description: "A Full-Stack Community Bulletin App.",
-      technologies: ["Flutter", "Supabase"],
+      description: "A Full-Stack Community Bulletin App, where the Barangay Officials can post Announcements, Event Schedules, and Emergency Alerts",
+      technologies: ["Flutter", "Supabase", "Firebase"],
       website: "#",
       github: "#",
       color: "purple",
-      logo: "📑",
-      image: "/images/ogol.png",
+      logo: "📱",
+      image: "/images/BULLETIN.jpg",
       hasMobile: true,
-      mobileUrl: "#"
+      mobileUrl: "https://drive.google.com/file/d/1OYuRqjbYosS77LGPX_n5vXXeMyNB_pRR/view?usp=drive_link"
     },
   ];
 
@@ -66,9 +66,8 @@ export default function Projects() {
       id="projects"
       className="bg-white text-gray-800 px-4 py-16 max-w-4xl mx-auto"
     >
-      <div className={`transition-all duration-1000 delay-300 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`}>
+      <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
         <h2 className="text-sm font-bold mb-4 border border-black rounded-full px-4 py-1 w-fit mx-auto bg-black text-white">
           <span className="mr-2">My Projects</span>
         </h2>
@@ -81,9 +80,8 @@ export default function Projects() {
           {projectsData.map((project, index) => (
             <div
               key={project.id}
-              className={`bg-gray-50 rounded-lg p-6 transition-all duration-500 shadow-sm hover:shadow-md ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
+              className={`bg-gray-50 rounded-lg p-6 transition-all duration-500 shadow-sm hover:shadow-md ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
               style={{
                 transitionDelay: `${index * 150}ms`,
               }}
@@ -121,8 +119,8 @@ export default function Projects() {
                             project.color === "blue"
                               ? "#3b82f6"
                               : project.color === "purple"
-                              ? "#8b5cf6"
-                              : "#10b981",
+                                ? "#8b5cf6"
+                                : "#10b981",
                         }}
                       >
                         {project.logo}
