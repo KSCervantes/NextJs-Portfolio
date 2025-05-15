@@ -25,7 +25,7 @@ const skillIcons: Record<string, JSX.Element> = {
   ),
   Databases: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-database-icon lucide-database"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5V19A9 3 0 0 0 21 19V5" /><path d="M3 12A9 3 0 0 0 21 12" /></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-database-icon lucide-database"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5V19A9 3 0 0 0 21 19V5" /><path d="M3 12A9 3 0 0 0 21 12" /></svg>
     </svg>
   ),
   Python: (
@@ -35,7 +35,7 @@ const skillIcons: Record<string, JSX.Element> = {
   ),
   etc: (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-ellipsis-icon lucide-ellipsis"><circle cx="12" cy="12" r="1" /><circle cx="19" cy="12" r="1" /><circle cx="5" cy="12" r="1" /></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-ellipsis-icon lucide-ellipsis"><circle cx="12" cy="12" r="1" /><circle cx="19" cy="12" r="1" /><circle cx="5" cy="12" r="1" /></svg>
     </svg>
   ),
 };
@@ -78,59 +78,57 @@ export default function WorkExperience() {
   ];
 
   return (
-    <section
-      id="experience"
-      className=" bg-white text-gray-800 px-4 py- max-w-4xl mx-auto mb-20"
-    >
-      <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
-        <h2 className="text-2xl font-extrabold mb-8 text-left">
-          <span className="mr-2">Work Experience</span>
+    <section id="experience" className="bg-white text-gray-800 px-4 py-16 max-w-4xl mx-auto relative overflow-hidden">
+      {/* Enhanced decorative elements */}
+      <div className="absolute top-0 left-0 w-56 h-56 bg-white rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob"></div>
+      <div className="absolute top-0 right-0 w-56 h-56 bg-purple-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-2000"></div>
+      <div className="absolute -bottom-8 left-20 w-56 h-56 bg-pink-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-4000"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-blue-200/30 via-purple-200/30 to-pink-200/30 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse"></div>
+
+      <div className={`transition-all duration-1000 delay-300 relative ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <h2 className="text-3xl font-black mb-5 text-left relative">
+          <span className="mr-2 bg-black bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 inline-block">Work Experience</span>
+          <div className="absolute bottom-0 left-0 w-32 h-1 rounded-full transform hover:scale-x-110 transition-transform duration-300 origin-left"></div>
         </h2>
-        <div className="space-y-6">
+
+        <div className="space-y-4">
           {experienceData.map((exp, index) => (
             <div
               key={exp.id}
-              className={`transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`}
-              style={{
-                transitionDelay: `${index * 150}ms`,
-              }}
+              className={`backdrop-blur-md bg-white/40 rounded-2xl p-6 border border-gray-200/50 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              style={{ transitionDelay: `${index * 150}ms` }}
             >
               <div className="flex items-start">
                 <Link
                   href={exp.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-shrink-0 mr-4 text-3xl bg-gray-100 w-12 h-12 flex items-center justify-center rounded-full"
+                  className="flex-shrink-0 mr-4 text-2xl bg-white w-16 h-16 flex items-center justify-center rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:rotate-12"
                   style={{ color: exp.color === 'blue' ? '#3b82f6' : exp.color === 'purple' ? '#8b5cf6' : '#10b981' }}
                 >
                   {exp.logo}
                 </Link>
                 <div className="flex-1">
-                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
                     <Link
                       href={exp.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-base font-medium text-gray-900 hover:underline"
+                      className="text-lg font-bold text-gray-900 hover:text-blue-600 transition-colors duration-300"
                     >
                       {exp.company}
                     </Link>
-                    <span className="text-md font-medium text-gray-500 sm:ml-2 mt-1 sm:mt-0">
-                      {exp.period}
-                    </span>
+                    <span className="text-xs font-medium text-gray-500 sm:ml-2 bg-gray-100 px-3 py-1 rounded-full">{exp.period}</span>
                   </div>
-                  <p className="text-md font-medium mt-1"
-                    style={{ color: exp.color === 'blue' ? '#3b82f6' : exp.color === 'purple' ? '#8b5cf6' : '#10b981' }}>
+                  <p className="text-base font-semibold mt-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
                     {exp.position}
                   </p>
-                  <p className="text-gray-500 text-md mt-2">{exp.description}</p>
-                  <div className="mt-2 flex flex-wrap gap-1">
+                  <p className="text-gray-600 text-sm mt-1 leading-relaxed">{exp.description}</p>
+                  <div className="mt-3 flex flex-wrap gap-1.5">
                     {exp.skills.map((skill, i) => (
                       <span
                         key={i}
-                        className="flex text-xs bg-black text-white px-2 py-0.5 rounded items-center gap-1"
+                        className="text-xs bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white px-3 py-1 rounded-lg border border-gray-700/50 hover:scale-105 hover:shadow-lg hover:shadow-gray-900/20 transition-all duration-300 flex items-center gap-1"
                       >
                         {skillIcons[skill] || skillIcons["etc"]}
                         {skill}

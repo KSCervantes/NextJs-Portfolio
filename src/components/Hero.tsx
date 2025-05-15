@@ -75,84 +75,101 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 md:px-10 py-10 relative overflow-hidden">
+    <section className="min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 md:px-10 py-10 relative overflow-hidden bg-white">
+      {/* Enhanced background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-24 -left-24 w-96 h-96 bg-blue-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+        <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-purple-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-yellow-50 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-1000"></div>
+      </div>
+
       {/* Main content container with fixed width and centering */}
-      <div className="w-full max-w-4xl mx-auto">
+      <div className="w-full max-w-7xl mx-auto relative z-10">
         <div
-          className={`transition-all duration-1000 transform ${
-            isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-          } flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8`}
+          className={`transition-all duration-1000 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+            } flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-16`}
         >
-          {/* Profile image - consistent sizing across devices */}
-          <div className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 overflow-hidden rounded-full flex-shrink-0 relative">
-            <Image
-              src="/images/Profile.png"
-              alt="Profile picture"
-              fill
-              sizes="(max-width: 768px) 8rem, 10rem"
-              className="object-cover"
-              priority
-            />
+          {/* Profile image - enhanced with subtle shadow and border */}
+          <div className="relative group">
+            <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 lg:w-60 lg:h-60 overflow-hidden rounded-full flex-shrink-0 relative shadow-2xl border-4 border-white transform group-hover:scale-105 transition-all duration-500">
+              <Image
+                src="/images/Profile.png"
+                alt="Profile picture"
+                fill
+                sizes="(max-width: 640px) 9rem, (max-width: 768px) 11rem, (max-width: 1024px) 13rem, 15rem"
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 mix-blend-overlay group-hover:opacity-75 transition-opacity duration-500"></div>
+            </div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity duration-500 -z-10"></div>
           </div>
 
-          {/* Text content - more controlled widths */}
-          <div className="text-center md:text-left w-full max-w-lg">
-            <h1 className="text-1xl sm:text-1xl md:text-1xl lg:text-1xl mb-2 text-gray-600">
-              Hi, I&apos;m Kyle <span className="inline-block animate-wave origin-bottom-right">Cervantes</span>
-            </h1>
-            <h2 className="text-xl sm:text-4xl md:text-5xl font-semibold text-gray-700 mb-4">
-              Student Developer
-            </h2>
+          {/* Text content - enhanced typography and spacing */}
+          <div className="text-center lg:text-left w-full max-w-2xl">
+            <div className="space-y-4 sm:space-y-6">
+              <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-600 font-light tracking-wide">
+                Hi Good Day, I&apos;m
+              </h1>
+              <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900">
+                Kyle <span className="inline-block animate-wave origin-bottom-right">Cervantes</span>
+              </h2>
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-700">
+                Software Developer
+              </h3>
 
-            <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 leading-relaxed">
-              Growing up in the Philippines, I’ve always been fascinated by how technology can solve everyday problems. Now, as a student and aspiring developer, I’m channeling that curiosity into building meaningful web and mobile experiences. I’m passionate about design that serves real users—and I’m always exploring new ways to turn creative ideas into impactful digital products.
-            </p>
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                I'm a student who is interested in web and mobile development. I'm also a person who is interested in learning new things.
+              </p>
 
-            {/* Add the "Get in Touch" button */}
-            <a
-              href="#contact"
-              className="inline-block px-6 py-3 text-white bg-black rounded-lg shadow-md hover:bg-gray-900 transition-all"
-            >
-              Get in Touch
-            </a>
+              {/* Enhanced "Get in Touch" button */}
+              <div className="pt-4">
+                <a
+                  href="#contact"
+                  className="inline-block px-8 py-4 text-white bg-gradient-to-r from-gray-900 to-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105 hover:from-gray-800 hover:to-gray-700 text-base sm:text-lg font-medium relative group"
+                >
+                  <span className="relative z-10">Get in Touch</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </a>
+              </div>
+            </div>
 
-            {/* Skills slider with fixed width container */}
-            <div className="w-full overflow-hidden">
+            {/* Enhanced skills slider with better spacing and animations */}
+            <div className="mt-12 w-full overflow-hidden bg-white/70 backdrop-blur-md rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg border border-gray-100">
               <div
                 ref={skillsContainerRef}
-                className="flex animate-scroll gap-3 sm:gap-4 py-3"
+                className="flex animate-scroll gap-4 sm:gap-5 md:gap-6 py-4 sm:py-5 md:py-6"
                 style={{
-                  width: "calc(100px * 12)", // Double the number of items for seamless loop
-                  animationDuration: "20s",
+                  width: "calc(110px * 12)",
+                  animationDuration: "25s",
                   animationIterationCount: "infinite",
                   animationTimingFunction: "linear"
                 }}
               >
-                {/* First set of skills - consistent pill sizes */}
-                {["HTML", "React", "Python", "JavaScript","TypeScript", "Flutter", "PHP", "Next.js", "Photoshop"].map((skill, i) => (
+                {/* First set of skills - enhanced pill design */}
+                {["HTML", "React", "Python", "JavaScript", "TypeScript", "Flutter", "PHP", "Next.js", "Photoshop"].map((skill, i) => (
                   <div
                     key={`skill-${i}`}
-                    className={`flex items-center justify-center gap-1.5 px-3 py-1.5 border border-gray-200 rounded-full bg-white transition-all hover:shadow-sm whitespace-nowrap ${
-                      isLoaded ? 'opacity-100' : 'opacity-0'
-                    }`}
+                    className={`flex items-center justify-center gap-2 px-5 py-2.5 border border-gray-200 rounded-full bg-white/80 shadow-sm hover:shadow-md transition-all hover:scale-105 hover:bg-white whitespace-nowrap ${isLoaded ? 'opacity-100' : 'opacity-0'
+                      }`}
                     style={{ transitionDelay: `${i * 100 + 300}ms` }}
                   >
                     {skillIcons[skill as keyof typeof skillIcons]}
-                    <span className="text-xs sm:text-sm">{skill}</span>
+                    <span className="text-sm sm:text-base font-medium">{skill}</span>
                   </div>
                 ))}
 
                 {/* Duplicate for infinite scroll effect */}
-                {["HTML", "React", "Python", "JavaScript", "Flutter", "PHP", "Next.js","Photoshop"].map((skill, i) => (
+                {["HTML", "React", "Python", "JavaScript", "Flutter", "PHP", "Next.js", "Photoshop"].map((skill, i) => (
                   <div
                     key={`skill-dup-${i}`}
-                    className={`flex items-center justify-center gap-1.5 px-3 py-1.5 border border-gray-200 rounded-full bg-white transition-all hover:shadow-sm whitespace-nowrap ${
-                      isLoaded ? 'opacity-100' : 'opacity-0'
-                    }`}
+                    className={`flex items-center justify-center gap-2 px-5 py-2.5 border border-gray-200 rounded-full bg-white/80 shadow-sm hover:shadow-md transition-all hover:scale-105 hover:bg-white whitespace-nowrap ${isLoaded ? 'opacity-100' : 'opacity-0'
+                      }`}
                     style={{ transitionDelay: `${i * 100 + 300}ms` }}
                   >
                     {skillIcons[skill as keyof typeof skillIcons]}
-                    <span className="text-xs sm:text-sm">{skill}</span>
+                    <span className="text-sm sm:text-base font-medium">{skill}</span>
                   </div>
                 ))}
               </div>
@@ -161,19 +178,19 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator - always at same position */}
+      {/* Enhanced scroll indicator */}
       <div
-        className={`absolute bottom-6 left-1/2 transform -translate-x-1/2 transition-opacity duration-1000 ${
-          isLoaded ? 'opacity-30' : 'opacity-0'
-        }`}
+        className={`absolute bottom-10 sm:bottom-12 md:bottom-14 left-1/2 transform -translate-x-1/2 transition-opacity duration-1000 ${isLoaded ? 'opacity-70' : 'opacity-0'
+          }`}
       >
         <div className="animate-bounce">
           <svg
-            width="24"
-            height="24"
+            width="32"
+            height="32"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="text-gray-700"
           >
             <path
               d="M12 4V20M12 20L6 14M12 20L18 14"
