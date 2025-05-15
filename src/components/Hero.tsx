@@ -120,7 +120,7 @@ export default function Hero() {
               </h3>
 
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                I'm a student who is interested in web and mobile development. I'm also a person who is interested in learning new things.
+                I&apos;m a student who is interested in web and mobile development. I&apos;m also a person who is interested in learning new things.
               </p>
 
               {/* Enhanced "Get in Touch" button */}
