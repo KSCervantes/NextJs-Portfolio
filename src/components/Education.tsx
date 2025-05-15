@@ -59,9 +59,9 @@ export default function Education() {
     <section id="education" className="bg-white text-gray-800 px-4 py-16 max-w-4xl mx-auto relative overflow-hidden">
       {/* Enhanced decorative elements */}
       <div className="absolute top-0 left-0 w-56 h-56 bg-white rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob"></div>
-      <div className="absolute top-0 right-0 w-56 h-56 bg-purple-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-2000"></div>
-      <div className="absolute -bottom-8 left-20 w-56 h-56 bg-pink-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-4000"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-blue-200/30 via-purple-200/30 to-pink-200/30 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse"></div>
+      <div className="absolute top-0 right-0 w-56 h-56 bg-white rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-2000"></div>
+      <div className="absolute -bottom-8 left-20 w-56 h-56 bg-white rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-4000"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-blue-200/30 via-white-200/30 to-white/30 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse"></div>
 
       <div className={`transition-all duration-1000 delay-300 relative ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         <h2 className="text-3xl font-black mb-5 text-left relative">
@@ -96,7 +96,7 @@ export default function Education() {
                   </p>
                   <p className="text-gray-600 text-sm mt-1 leading-relaxed">{edu.description}</p>
                   {edu.courses && (
-                    <div className="mt-3 flex flex-wrap gap-1.5">
+                    <div className="mt-3 flex flex-wrap gap-1">
                       {edu.courses.map((course, idx) => (
                         <span key={idx} className="text-xs bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white px-3 py-1 rounded-lg border border-gray-700/50 hover:scale-105 hover:shadow-lg hover:shadow-gray-900/20 transition-all duration-300">
                           {course}

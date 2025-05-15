@@ -79,7 +79,7 @@ export default function Footer() {
           {/* Modernized scroll to top button */}
           <button
             onClick={scrollToTop}
-            className={`absolute right-2 sm:right-4 bg-gradient-to-br from-indigo-500 to-purple-500 text-white p-2 sm:p-2.5 rounded-full shadow-lg transition-all duration-300 z-50 hover:from-indigo-600 hover:to-purple-600 hover:shadow-xl focus:outline-none transform hover:scale-110 ${showScrollTop ? "opacity-100" : "opacity-0 pointer-events-none"
+            className={`absolute right-2 sm:right-4 bg-black text-white p-2 sm:p-2.5 rounded-full shadow-lg transition-all duration-300 z-50 hover:from-indigo-600 hover:to-purple-600 hover:shadow-xl focus:outline-none transform hover:scale-110 ${showScrollTop ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
             aria-label="Scroll to top"
           >
