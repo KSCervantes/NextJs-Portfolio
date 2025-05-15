@@ -70,7 +70,7 @@ export default function About() {
       >
         <h2 className="text-3xl font-black mb-5 text-left relative">
           <span className="mr-2 bg-black bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 inline-block">About Me</span>
-          <div className="absolute bottom-0 left-0 w-40 h-1.5 bg-white rounded-full transform hover:scale-x-110 transition-transform duration-300 origin-left"></div>
+          <div className="absolute bottom-0 left-0 w-40 h-1.5 rounded-full transform hover:scale-x-110 transition-transform duration-300 origin-left"></div>
         </h2>
 
         {/* Code Block - Enhanced with 3D effect */}
