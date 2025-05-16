@@ -113,10 +113,10 @@ const Learning = () => {
                         <span className="mr-2">Current Focus</span>
                     </h2>
                     <h2 className="text-5xl font-extrabold mb-6 text-center text-black bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600">
-                        What I'm Learning Now
+                        What I&apos;m Learning Now
                     </h2>
                     <p className="text-gray-600 text-center mb-12 text-sm md:text-base max-w-2xl mx-auto">
-                        Here are the technologies and skills I'm currently mastering to enhance my development capabilities.
+                        Here are the technologies and skills I&apos;m currently mastering to enhance my development capabilities.
                     </p>
                 </motion.div>
 
