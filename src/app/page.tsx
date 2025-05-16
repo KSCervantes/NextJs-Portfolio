@@ -4,7 +4,7 @@ import WorkExperience from "@/components/WorkExperience";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import Projects from "@/components/Projects";
-import Education from "@/components/Education";
+import Learning from "@/components/Learning";
 
 export default function Home() {
   return (
@@ -12,9 +12,9 @@ export default function Home() {
       <main className="bg-white text-gray-900">
         <Hero />
         <About />
-        <Education />
         <WorkExperience />
         <Projects />
+        <Learning />
       </main>
       <Contact />
       <Footer />

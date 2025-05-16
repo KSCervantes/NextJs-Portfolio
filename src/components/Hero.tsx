@@ -1,15 +1,47 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 export default function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
   const skillsContainerRef = useRef(null);
+  const autoplayOptions = {
+    delay: 3000,
+    stopOnInteraction: false,
+    rootNode: (emblaRoot: HTMLElement) => emblaRoot.parentElement,
+  };
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay(autoplayOptions)]);
 
   useEffect(() => {
     setIsLoaded(true);
   }, []);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  // Carousel images
+  const carouselImages = [
+    {
+      src: "/images/Profile.png",
+      alt: "Profile picture 1"
+    },
+    {
+      src: "/images/IMG_20240903_115025_182.jpg",
+      alt: "Profile picture 2"
+    },
+    {
+      src: "/images/IMG_20250220_171955_144.webp",
+      alt: "Profile picture 3"
+    }
+  ];
 
   // Skill icons mapping
   const skillIcons = {
@@ -88,22 +120,54 @@ export default function Hero() {
       <div className="w-full max-w-7xl mx-auto relative z-10">
         <div
           className={`transition-all duration-1000 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-            } flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-16`}
+            } flex flex-col lg:flex-row-reverse items-center lg:items-start gap-10 lg:gap-16`}
         >
-          {/* Profile image - enhanced with subtle shadow and border */}
+          {/* Profile image carousel */}
           <div className="relative group">
-            <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 lg:w-60 lg:h-60 overflow-hidden rounded-full flex-shrink-0 relative shadow-2xl border-4 border-white transform group-hover:scale-105 transition-all duration-500">
-              <Image
-                src="/images/Profile.png"
-                alt="Profile picture"
-                fill
-                sizes="(max-width: 640px) 9rem, (max-width: 768px) 11rem, (max-width: 1024px) 13rem, 15rem"
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-black-500/20 mix-blend-overlay group-hover:opacity-75 transition-opacity duration-500"></div>
+            <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 overflow-hidden rounded-full flex-shrink-0 relative shadow-2xl border-4 border-white">
+              <div className="embla h-full" ref={emblaRef}>
+                <div className="embla__container flex h-full">
+                  {carouselImages.map((image, index) => (
+                    <div key={index} className="embla__slide flex-[0_0_100%] min-w-0 h-full">
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={image.src}
+                          alt={image.alt}
+                          fill
+                          sizes="(max-width: 640px) 12rem, (max-width: 768px) 14rem, (max-width: 1024px) 16rem, 18rem"
+                          className="object-cover object-center rounded-full"
+                          priority={index === 0}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-black-500/20 mix-blend-overlay rounded-full"></div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-black rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity duration-500 -z-10"></div>
             </div>
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-black rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity duration-500 -z-10"></div>
+
+            {/* Carousel Navigation Buttons */}
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
+              <button
+                onClick={scrollPrev}
+                className="p-2 rounded-full bg-white/80 hover:bg-white shadow-lg transition-all hover:scale-110"
+                aria-label="Previous slide"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+              </button>
+              <button
+                onClick={scrollNext}
+                className="p-2 rounded-full bg-white/80 hover:bg-white shadow-lg transition-all hover:scale-110"
+                aria-label="Next slide"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+              </button>
+            </div>
           </div>
 
           {/* Text content - enhanced typography and spacing */}
@@ -115,7 +179,7 @@ export default function Hero() {
               <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900">
                 Kyle <span className="inline-block animate-wave origin-bottom-right">Cervantes</span>
               </h2>
-              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-700">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-600">
                 Software Developer
               </h3>
 
@@ -129,7 +193,7 @@ export default function Hero() {
                   href="#contact"
                   className="inline-block px-8 py-4 text-white bg-gradient-to-r from-gray-900 to-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105 hover:from-gray-800 hover:to-gray-700 text-base sm:text-lg font-medium relative group"
                 >
-                  <span className="relative z-10">Get in Touch</span>
+                  <span className="relative z-10">Contact Me</span>
                   <div className="absolute inset-0 bg-black rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </a>
               </div>

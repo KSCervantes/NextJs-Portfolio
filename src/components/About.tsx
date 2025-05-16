@@ -27,7 +27,6 @@ export default function About() {
     role: "Web & Mobile Developer",
     address: "Lianga, Surigao del Sur",
     email: "kylecervantes2003@gmail.com",
-    phone: "+639692091713",
     freelance: "Available",
     age: "21 Years",
     nationality: "Filipino",
@@ -112,9 +111,6 @@ export default function About() {
               ))}
               ],
             </div>
-            <div className="ml-4">
-              <span className="text-blue-500">phone</span>: &quot;{information.phone}&quot;,
-            </div>
             <div>{"};"}</div>
           </div>
         </div>
@@ -136,12 +132,12 @@ export default function About() {
                 />
               </svg>
             </span>
-            SOFT SKILLS
+            SOFT SKILLS:
           </h3>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="flex flex-col items-center transform hover:scale-105 transition-all duration-300 group">
-              <div className="relative w-24 h-24">
+              <div className="relative w-15 h-15">
                 <div className="absolute inset-0 rounded-full border-4 border-blue-100 animate-pulse group-hover:border-blue-200 transition-colors duration-300"></div>
                 <div
                   className="absolute inset-0 rounded-full border-4 border-blue-500 group-hover:border-blue-600 transition-colors duration-300"
@@ -151,15 +147,15 @@ export default function About() {
                     transform: "rotate(-90deg)",
                   }}
                 ></div>
-                <div className="absolute inset-0 flex items-center justify-center text-lg font-bold text-blue-600 group-hover:text-blue-700 transition-colors duration-300">
+                <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-blue-600 group-hover:text-blue-700 transition-colors duration-300">
                   60%
                 </div>
               </div>
-              <span className="mt-4 text-base font-semibold text-gray-700 group-hover:text-gray-900 transition-colors duration-300">Leadership</span>
+              <span className="mt-4 text-base font-semibold text-gray-700 group-hover:text-gray-900 transition-colors duration-300 text-sm">Leadership</span>
             </div>
 
             <div className="flex flex-col items-center transform hover:scale-105 transition-all duration-300 group">
-              <div className="relative w-24 h-24">
+              <div className="relative w-15 h-15">
                 <div className="absolute inset-0 rounded-full border-4 border-blue-100 animate-pulse group-hover:border-blue-200 transition-colors duration-300"></div>
                 <div
                   className="absolute inset-0 rounded-full border-4 border-blue-500 group-hover:border-blue-600 transition-colors duration-300"
@@ -169,15 +165,15 @@ export default function About() {
                     transform: "rotate(-90deg)",
                   }}
                 ></div>
-                <div className="absolute inset-0 flex items-center justify-center text-lg font-bold text-blue-600 group-hover:text-blue-700 transition-colors duration-300">
+                <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-blue-600 group-hover:text-blue-700 transition-colors duration-300">
                   75%
                 </div>
               </div>
-              <span className="mt-4 text-base font-semibold text-gray-700 group-hover:text-gray-900 transition-colors duration-300">Teamwork</span>
+              <span className="mt-4 text-base font-semibold text-gray-700 group-hover:text-gray-900 transition-colors duration-300 text-sm">Teamwork</span>
             </div>
 
             <div className="flex flex-col items-center transform hover:scale-105 transition-all duration-300 group">
-              <div className="relative w-24 h-24">
+              <div className="relative w-15 h-15">
                 <div className="absolute inset-0 rounded-full border-4 border-purple-100 animate-pulse group-hover:border-purple-200 transition-colors duration-300"></div>
                 <div
                   className="absolute inset-0 rounded-full border-4 border-purple-500 group-hover:border-purple-600 transition-colors duration-300"
@@ -187,15 +183,15 @@ export default function About() {
                     transform: "rotate(-90deg)",
                   }}
                 ></div>
-                <div className="absolute inset-0 flex items-center justify-center text-lg font-bold text-purple-600 group-hover:text-purple-700 transition-colors duration-300">
+                <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-purple-600 group-hover:text-purple-700 transition-colors duration-300">
                   75%
                 </div>
               </div>
-              <span className="mt-4 text-base font-semibold text-gray-700 group-hover:text-gray-900 transition-colors duration-300">Communication</span>
+              <span className="mt-4 text-base font-semibold text-gray-700 group-hover:text-gray-900 transition-colors duration-300 text-sm">Communication</span>
             </div>
 
             <div className="flex flex-col items-center transform hover:scale-105 transition-all duration-300 group">
-              <div className="relative w-24 h-24">
+              <div className="relative w-15 h-15">
                 <div className="absolute inset-0 rounded-full border-4 border-gray-200 animate-pulse group-hover:border-gray-300 transition-colors duration-300"></div>
                 <div
                   className="absolute inset-0 rounded-full border-4 border-gray-500 group-hover:border-gray-600 transition-colors duration-300"
@@ -205,11 +201,11 @@ export default function About() {
                     transform: "rotate(-90deg)",
                   }}
                 ></div>
-                <div className="absolute inset-0 flex items-center justify-center text-lg font-bold text-gray-700 group-hover:text-gray-900 transition-colors duration-300">
+                <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-gray-700 group-hover:text-gray-900 transition-colors duration-300">
                   85%
                 </div>
               </div>
-              <span className="mt-4 text-base font-semibold text-gray-700 group-hover:text-gray-900 transition-colors duration-300">Problem Solving</span>
+              <span className="mt-4 text-base font-semibold text-gray-700 group-hover:text-gray-900 transition-colors duration-300 text-sm">Problem Solving</span>
             </div>
           </div>
         </div>
@@ -231,7 +227,7 @@ export default function About() {
                 />
               </svg>
             </span>
-            TECHNICAL EXPERTISE
+            TECHNICAL EXPERTISE:
           </h3>
 
           <div className="flex flex-wrap gap-2">
